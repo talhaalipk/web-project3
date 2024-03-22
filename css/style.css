@@ -112,6 +112,11 @@ main .input input {
   font-weight: 600;
 }
 
+main .input input:focus{
+  outline: none;
+  box-shadow: 0px 5px 7px -3px rgba(236, 233, 233, 0.1);
+}
+
 main .input .button {
   width: 6vmax;
   height: 3.5vmax;

@@ -45,7 +45,7 @@ function addnewTask(value) {
   newtask.querySelector(".disable").addEventListener("click", function (e) {
     let fillCircleImg = document.createElement("img");
     fillCircleImg.src = "./assets/images/FillCircle.png";
-    fillCircleImg.alt = "completed";
+    fillCircleImg.alt = "completedpaas";
     e.target.replaceWith(fillCircleImg);
     // console.log(fillCircleImg.nextSibling);
     let para = fillCircleImg.nextSibling.querySelector("p");
@@ -63,7 +63,14 @@ function addnewTask(value) {
       e.target.parentNode.remove();
       // removeElement(e.target.parentNode);
       numOfTaskCreated--;
-      numOfTaskDone--;
+
+      let parent = e.target.parentNode;
+      console.log(parent.querySelector('img').alt);
+      if( parent.querySelector('img').alt == "completedpaas")
+      {
+        console.log("inside");
+        numOfTaskDone-- ;
+      }
 
       if (numOfTaskCreated === 0) {
         startUp();
@@ -81,7 +88,7 @@ async function clearErrorTextWithDelay() {
   errorText.innerHTML = "";
 }
 
-//task add lisner
+//task addEventListener
 addButton.addEventListener("click", (e) => {
   let value = input.value;
   input.value = "";
@@ -94,6 +101,30 @@ addButton.addEventListener("click", (e) => {
     addnewTask(value);
   }
 });
+
+// Function to add a new task
+function addTask() {
+  let value = input.value;
+  input.value = "";
+  // console.log(typeof input.value);
+
+  if (value === "") {
+    errorText.innerHTML = "Invalid Input";
+    clearErrorTextWithDelay();
+  } else {
+    addnewTask(value);
+  }
+}
+
+// Function to handle keypress event
+function handleKeyPress(event) {
+  if (event.key === 'Enter') { 
+    addTask(); 
+  }
+}
+
+document.querySelector('input').addEventListener("keypress", handleKeyPress);
+
 
 //Calling functions
 startUp();
