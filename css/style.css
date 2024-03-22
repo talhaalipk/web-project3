@@ -124,7 +124,7 @@ main .input .button {
 }
 
 main .input .button:hover {
-  width: 6.1vw;
+  width: 6.1vmax;
   height: 3.6vmax;
   cursor: pointer;
   box-shadow: rgba(171, 171, 179, 0.2) 0px 7px 29px 0px;
