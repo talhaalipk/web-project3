@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Css -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- js -->
+    <script src="./js/script.js" defer></script>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./assets/images/logo_rocket.png"
+      type="image/x-icon"
+    />
+    <!-- Tittle -->
+    <title>Todo - Talha Ali</title>
+  </head>
+  <body>
+    <!-- nav Section -->
+    <nav>
+      <p>
+        Design credit belongs to
+        <a href="https://www.figma.com/community/file/1175262836322989600"
+          >Matheus Susko</a
+        >
+        Used for practice purposes only.
+      </p>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+      <div class="inner">
+        <img src="./assets/images/logo_rocket.png" alt="Logo" />
+        <h1>to<span>do</span></h1>
+      </div>
+    </header>
+
+    <!-- main  -->
+    <main>
+      <div class="input">
+        <input type="text" id="input" placeholder="Add a new task" />
+        <div class="button" id="addButton">
+          <span> Add </span>
+          <img src="./assets/images/add.png" alt="Add Sign" />
+        </div>
+      </div>
+
+      <div class="errordiv">
+        <p id="errorText"></p>
+      </div>
+
+      <div class="container">
+        <div class="taskDetails">
+          <div class="box">
+            <p>Tasks created</p>
+            <span id="taskCreater"></span>
+          </div>
+
+          <div class="box">
+            <p>Completed</p>
+            <span id="taskDone"></span>
+          </div>
+        </div>
+
+        <div id="taskContainer" class="taskDiv center"></div>
+      </div>
+    </main>
+  </body>
+</html>
