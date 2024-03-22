@@ -153,7 +153,7 @@ main .errordiv p {
 /* Container start*/
 
 main .container {
-  width: 46.5vw;
+  width: 46.5vmax;
   /* background-color: #d22c2c; */
 }
 
